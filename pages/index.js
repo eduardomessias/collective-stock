@@ -138,17 +138,17 @@ class Home extends Component {
           <h5>Recent Users</h5>
           <ul className="w3-ul w3-card-4 w3-white">
             <li className="w3-padding-16">
-              <img src="/w3images/avatar2.png" className="w3-left w3-circle w3-margin-right" style={{ width: 35 + 'px' }} />
+              <Image alt="" src="/w3images/avatar2.png" className="w3-left w3-circle w3-margin-right" width={35} height={35} />
               <span className="w3-xlarge">Mike</span>
               <br />
             </li>
             <li className="w3-padding-16">
-              <img src="/w3images/avatar5.png" className="w3-left w3-circle w3-margin-right" style={{ width: 35 + 'px' }} />
+              <Image alt="" src="/w3images/avatar5.png" className="w3-left w3-circle w3-margin-right" width={35} height={35} />
               <span className="w3-xlarge">Jill</span>
               <br />
             </li>
             <li className="w3-padding-16">
-              <img src="/w3images/avatar6.png" className="w3-left w3-circle w3-margin-right" style={{ width: 35 + 'px' }} />
+              <Image alt="" src="/w3images/avatar6.png" className="w3-left w3-circle w3-margin-right" width={35} height={35} />
               <span className="w3-xlarge">Jane</span>
               <br />
             </li>
@@ -161,7 +161,7 @@ class Home extends Component {
           <h5>Recent Comments</h5>
           <div className="w3-row">
             <div className="w3-col m2 text-center">
-              <img className="w3-circle" src="/w3images/avatar3.png" style={{ width: 96 + 'px', height: 96 + 'px' }} />
+              <Image alt="" className="w3-circle" src="/w3images/avatar3.png" width={96} height={96} />
             </div>
             <div className="w3-col m10 w3-container">
               <h4>John <span className="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
@@ -172,7 +172,7 @@ class Home extends Component {
   
           <div className="w3-row">
             <div className="w3-col m2 text-center">
-              <img className="w3-circle" src="/w3images/avatar1.png" style={{ width: 96 + 'px', height: 96 + 'px' }} />
+              <Image alt="" className="w3-circle" src="/w3images/avatar1.png" width={96} height={96} />
             </div>
             <div className="w3-col m10 w3-container">
               <h4>Bo <span className="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
