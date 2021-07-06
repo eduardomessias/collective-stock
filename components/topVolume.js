@@ -20,11 +20,11 @@ const TopVolumeTable = () => {
             </thead>
             <tbody>
                 {topVolume.map ((c, i) => (
-                    <tr>
+                    <tr key={i}>
                         <td><i className="fa fa-user w3-text-blue w3-large"></i></td>
                         <td>{c.product}</td>
                         <td>{c.latestPrice}</td>
-                        <td>{c.timestamp}</td>
+                        <td>{c.timestamp}</td>eduardo.messias@outlook.com
                     </tr>    
                 ))}
             </tbody>
