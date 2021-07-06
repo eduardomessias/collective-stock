@@ -9,6 +9,10 @@ import PageContent from '../components/pageContent'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+import MessagesCard from '../components/messagesCard'
+import ViewsCard from '../components/viewsCard'
+import SharesCard from '../components/sharesCard'
+import UsersCard from '../components/usersCard'
 import TopVolumeTable from '../components/topVolume'
 
 class Home extends Component {
@@ -38,44 +42,16 @@ class Home extends Component {
   
         <div className="w3-row-padding w3-margin-bottom">
           <div className="w3-quarter">
-            <div className="w3-container w3-red w3-padding-16">
-              <div className="w3-left"><i className="fa fa-comment w3-xxxlarge"></i></div>
-              <div className="w3-right">
-                <h3>52</h3>
-              </div>
-              <div className="w3-clear"></div>
-              <h4>Messages</h4>
-            </div>
+            <MessagesCard />
           </div>
           <div className="w3-quarter">
-            <div className="w3-container w3-blue w3-padding-16">
-              <div className="w3-left"><i className="fa fa-eye w3-xxxlarge"></i></div>
-              <div className="w3-right">
-                <h3>99</h3>
-              </div>
-              <div className="w3-clear"></div>
-              <h4>Views</h4>
-            </div>
-          </div>
-        <div className="w3-quarter">
-            <div className="w3-container w3-teal w3-padding-16">
-              <div className="w3-left"><i className="fa fa-share-alt w3-xxxlarge"></i></div>
-              <div className="w3-right">
-                <h3>23</h3>
-              </div>
-              <div className="w3-clear"></div>
-              <h4>Shares</h4>
-            </div>
+            <ViewsCard />
           </div>
           <div className="w3-quarter">
-            <div className="w3-container w3-orange w3-text-white w3-padding-16">
-              <div className="w3-left"><i className="fa fa-users w3-xxxlarge"></i></div>
-              <div className="w3-right">
-                <h3>50</h3>
-              </div>
-              <div className="w3-clear"></div>
-              <h4>Users</h4>
-            </div>
+            <SharesCard />
+          </div>
+          <div className="w3-quarter">
+            <UsersCard />
           </div>
         </div>
   
