@@ -9,11 +9,8 @@ import PageContent from '../components/pageContent'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-import MessagesCard from '../components/messagesCard'
-import ViewsCard from '../components/viewsCard'
-import SharesCard from '../components/sharesCard'
-import UsersCard from '../components/usersCard'
-import TopVolumeTable from '../components/topVolume'
+import InfoCardSection from '../components/infoCardSection'
+import VolumeSection from '../components/volumeSection'
 
 class Home extends Component {
   constructor (props) {
@@ -40,35 +37,9 @@ class Home extends Component {
   
         <Header />
   
-        <div className="w3-row-padding w3-margin-bottom">
-          <div className="w3-quarter">
-            <MessagesCard />
-          </div>
-          <div className="w3-quarter">
-            <ViewsCard />
-          </div>
-          <div className="w3-quarter">
-            <SharesCard />
-          </div>
-          <div className="w3-quarter">
-            <UsersCard />
-          </div>
-        </div>
+        <InfoCardSection />
   
-        <div className="w3-panel">
-          <div className="w3-row-padding" style={{ margin: '0 -16px' }}>
-  
-            <div className="w3-third">
-              <h5>Regions</h5>
-              <Image src="/images/region.jpg" width={525} height={389} style={{ width: 100 + '%' }} alt="Google Regional Map" />
-            </div>
-  
-            <div className="w3-twothird">
-              <h5>Top volume</h5>
-              <TopVolumeTable />
-            </div>
-          </div>
-        </div>
+        <VolumeSection />
   
         <hr />
   

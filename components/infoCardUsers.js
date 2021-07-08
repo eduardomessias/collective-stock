@@ -1,6 +1,6 @@
 import InfoCard from './infoCard'
 
-const UsersCard = () =>
+const InfoCardUsers = () =>
     <InfoCard caption="Users" value="358" color="orange" icon="users" />
 
-export default UsersCard
+export default InfoCardUsers
