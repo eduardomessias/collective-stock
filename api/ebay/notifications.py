@@ -16,10 +16,15 @@ class handler(BaseHTTPRequestHandler):
 
     verification_token = 'KpFTCRfbImSLyLxKHyE4abXo4iywHI9q'
     endpoint = 'https://collective-stock.vercel.app/api/ebay/notifications'
-    m = hashlib.sha256(str(challenge_code+verification_token+endpoint).encode())
+    m = hashlib.sha256((challenge_code+verification_token+endpoint).encode())
     hash = m.hexdigest()
 
+
+    import json
+    json_string = json.dumps('{"challengeResponse":"'+hash+'"}')
+
+
     self.send_response(200)
-    self.send_header('Content-type', 'text/plain')
+    self.send_header('Content-type', 'application/json')
     self.end_headers()
-    self.wfile.write((hash).encode())
+    self.wfile.write(json_string)
