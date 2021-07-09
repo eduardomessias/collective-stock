@@ -1,18 +1,24 @@
 from http.server import BaseHTTPRequestHandler
 
+
 class handler(BaseHTTPRequestHandler):
 
 
   def do_GET(self):
     import datetime
     import json
+    import os
 
     from ebaysdk.exception import ConnectionError
     from ebaysdk.finding import Connection as Finding
 
-    try:
-        ebay = Finding (domain='svcs.sandbox.ebay.com', appid='EduardoM-collecti-SBX-d583e0402-1c822ca4', config_file=None)
+    from dotenv import load_dotenv
 
+
+    try:
+        load_dotenv()
+        appid = os.environ.get("EBAY_APPID")
+        ebay = Finding (domain='svcs.sandbox.ebay.com', appid=appid, config_file=None)
         response = ebay.execute('findItemsAdvanced', {
             'keywords': 'Collectibles',
             #'categoryId' : ['177', '111422'],

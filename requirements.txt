@@ -1,1 +1,2 @@
 ebaysdk
+python-dotenv
