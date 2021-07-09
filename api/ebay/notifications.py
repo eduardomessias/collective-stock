@@ -10,7 +10,7 @@ class handler(BaseHTTPRequestHandler):
     super().__init__(*args, **kwargs)
 
 
-  def do_GET(self, challenge_code):
+  def do_GET(self):
     import hashlib
     import hashlib
 
