@@ -18,9 +18,10 @@ class handler(BaseHTTPRequestHandler):
     try:
         load_dotenv()
         appid = os.environ.get("EBAY_APPID")
-        ebay = Finding (domain='svcs.sandbox.ebay.com', appid=appid, config_file=None)
+        domain = os.environ.get("EBAY_DOMAIN")
+        ebay = Finding (domain=domain, appid=appid, config_file=None)
         response = ebay.execute('findItemsAdvanced', {
-            'keywords': 'Collectibles',
+            'keywords': 'comic+books',
             #'categoryId' : ['177', '111422'],
             # 'itemFilter': [
             #     {'name': 'Condition', 'value': 'Used'},
