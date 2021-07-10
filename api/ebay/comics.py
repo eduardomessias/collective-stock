@@ -32,16 +32,17 @@ class handler(BaseHTTPRequestHandler):
             #     'entriesPerPage': '25',
             #     'pageNumber': '1' 	 
             # },
-            'sortOrder': 'BidCountMost'
+            'sortOrder': 'CurrentPriceHighest'
         })
-        count = int(response.reply.searchResult._count)
+        if response.reply is not None and response.reply.searchResult is not None:
+            count = int(response.reply.searchResult._count)
 
-        if count > 0:
-            item_list = response.reply.searchResult.item
-            self.send_response(500)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write(str([item.title for item in item_list]).encode())
+            if count > 0:
+                item_list = response.reply.searchResult.item
+                self.send_response(500)
+                self.send_header('Content-type', 'text/plain')
+                self.end_headers()
+                self.wfile.write(str([item.title for item in item_list]).encode())
     except ConnectionError as e:
         self.send_response(500)
         self.send_header('Content-type', 'text/plain')
