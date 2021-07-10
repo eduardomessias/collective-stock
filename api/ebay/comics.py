@@ -28,11 +28,11 @@ class handler(BaseHTTPRequestHandler):
             #     {'name': 'MinPrice', 'value': '200', 'paramName': 'Currency', 'paramValue': 'GBP'},
             #     {'name': 'MaxPrice', 'value': '400', 'paramName': 'Currency', 'paramValue': 'GBP'}
             # ],
-            # 'paginationInput': {
-            #     'entriesPerPage': '25',
-            #     'pageNumber': '1' 	 
-            # },
-            'sortOrder': 'CurrentPriceHighest'
+            'paginationInput': {
+                'entriesPerPage': '25',
+                'pageNumber': '1' 	 
+            },
+            'sortOrder': 'BidCountMost'
         })
         count = int(response.reply.searchResult._count)
 
