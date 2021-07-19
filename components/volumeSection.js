@@ -8,7 +8,7 @@ const VolumeSection = () =>
 
             <div className="w3-third">
                 <h5>Volume per region</h5>
-                <Image src="/images/region.jpg" width={525} height={389} style={{ width: 100 + '%' }} alt="Google Regional Map" />
+                <Image alt="" src="/images/region.jpg" width={525} height={389} style={{ width: 100 + '%' }} alt="Google Regional Map" />
             </div>
 
             <div className="w3-twothird">

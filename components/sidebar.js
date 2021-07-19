@@ -11,7 +11,7 @@ class Sidebar extends Component {
                 <br />
                 <div className="w3-container w3-row">
                     <div className="w3-col s4">
-                        <Image src="/images/avatar.png" className="w3-circle" width={46} height={46} />
+                        <Image alt="" src="/images/avatar.png" className="w3-circle" width={46} height={46} />
                     </div>
                     <div className="w3-col s8 w3-bar">
                         <span>Welcome, <strong>Mike</strong></span>
