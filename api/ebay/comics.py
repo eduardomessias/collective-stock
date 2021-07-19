@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
             load_dotenv()
             APP_ID = os.environ.get("EBAY_APPID")
             api = Finding(siteid='EBAY-GB',appid=APP_ID,config_file=None)
-            response = api.execute('findItemsAdvanced', payload)
+            response = api.execute('findItemsAdvanced', self.payload)
             return response.dict()
         except ConnectionError as e:
             self.send_response(500)
