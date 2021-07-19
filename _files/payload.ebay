@@ -1,0 +1,7 @@
+{
+    'keywords': 'CGC',
+    'categoryId': ['259104'],
+    'itemFilter': [
+      {'name': 'StartTimeNewest'}
+    ]
+}

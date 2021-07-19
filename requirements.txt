@@ -1,2 +1,3 @@
 ebaysdk
+pandas
 python-dotenv
