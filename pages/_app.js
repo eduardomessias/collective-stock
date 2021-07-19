@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import '../styles/globals.css'
 
-const CollectiveStock = ({Component, pageProps}) =>
+const App = ({Component, pageProps}) =>
   <div>
     <Head>
       <meta charSet="UTF-8" />
@@ -14,4 +14,4 @@ const CollectiveStock = ({Component, pageProps}) =>
     <Component {...pageProps} />
   </ div>
 
-export default CollectiveStock
+export default App
