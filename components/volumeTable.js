@@ -1,4 +1,9 @@
-const VolumeTable = () => {
+const VolumeTable = () => { 
+    const loadVolume = async () => {
+        let vol = await fetch('https://collective-stock.vercel.app/api/ebay/comics')
+        console.log(vol)
+    }
+
     const volume = [{
         brand: "fa-user",
         product: "Amazing Spider-man #55",
