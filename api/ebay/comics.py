@@ -45,7 +45,7 @@ class handler(BaseHTTPRequestHandler):
             'pageNumber':page_number
         }
         json_items = self.search_ebay(payload)
-        self.send_response(500)
-        self.send_header('Content-type', 'text/plain')
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
         self.end_headers()
         self.wfile.write(json_items)
