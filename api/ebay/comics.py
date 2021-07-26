@@ -1,14 +1,12 @@
-# import datetime
-import json
-from dotenv import load_dotenv
-from ebaysdk.exception import ConnectionError
-from ebaysdk.finding import Connection as Finding
 from http.server import BaseHTTPRequestHandler
 
 
 class handler(BaseHTTPRequestHandler):
     def get_results(self,payload):
         import os
+        from dotenv import load_dotenv
+        from ebaysdk.exception import ConnectionError
+        from ebaysdk.finding import Connection as Finding
         try:
             load_dotenv()
             APP_ID = os.environ.get("EBAY_APPID")
@@ -30,6 +28,7 @@ class handler(BaseHTTPRequestHandler):
 
 
     def search_ebay(self,payload):
+        import json
         results = self.get_results(payload)
         item_list = results['searchResult']['item']
         return json.dumps(item_list)
