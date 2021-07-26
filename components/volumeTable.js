@@ -1,8 +1,12 @@
-const VolumeTable = () => { 
-    const loadVolume = async () => {
-        let vol = await fetch('https://collective-stock.vercel.app/api/ebay/comics')
-        console.log(vol)
+const COMICS_API = 'https://collective-stock.vercel.app/api/ebay/comics'
+const loadVolume = async () => {
+    let vol = await fetch(COMICS_API)
+    if (vol) {
+        console.dir(vol)
     }
+}
+const VolumeTable = () => { 
+    const t = loadVolume()
 
     const volume = [{
         brand: "fa-user",
