@@ -1,0 +1,35 @@
+.topContainer {
+    z-index: 4
+}
+
+.header {
+    padding-top: 2px;
+}
+
+.overlay {
+    cursor: pointer;
+}
+
+.pageContent {
+    margin-left: 300px;
+    margin-top: 43px;
+}
+
+.sidebar {
+    z-index: 3;
+    width: 300px;
+}
+
+.mr-32 {
+    padding-right: 326px;
+}
+
+.comicsBackground {
+    background-image: url('/images/comics.jpeg');
+    background-size: 100%;
+    box-shadow: 4px 2px rgba(0,0,0,0.2);
+}
+
+.comicsBackground:hover {
+    box-shadow: 4px 4px rgba(0,0,0,0.2);
+}
