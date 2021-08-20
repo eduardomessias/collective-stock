@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import Image from 'next/image'
 
-import Body from '../components/body'
-import TopContainer from '../components/topContainer'
-import Sidebar from '../components/sidebar'
-import Overlay from '../components/overlay'
-import PageContent from '../components/pageContent'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import {
+  Body,
+  TopContainer,
+  Sidebar,
+  Overlay,
+  PageContent,
+  Header,
+  Footer
+} from '../components/layout'
 
 import InfoCardSection from '../components/infoCardSection'
 import VolumeSection from '../components/volumeSection'

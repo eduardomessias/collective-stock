@@ -2,10 +2,13 @@ import Image from 'next/image'
 
 import styles from './layout.module.css'
 
-export const Body = ({children}) =>
-    <div className="w3-light-grey">
-        {children}
-    </div>
+export function Body ({children}) {    
+    return (
+        <div className="w3-light-grey">
+            {children}
+        </div>
+    )    
+}
 
 export const TopContainer = ({children}) =>      
   <div className={styles.topContainer + " w3-bar w3-top w3-black w3-large"}>
@@ -31,9 +34,17 @@ export const PageContent = ({children}) =>
     </div>
 
 export const InfoCard = ({ caption, value, color, icon, img }) =>    
-    <div className={"w3-container w3-"+color+" w3-padding-16 w3-box-shadow " + styles.comicsBackground}>        
-        <i className={"fa fa-"+icon+" w3-xxxlarge"}></i>
-        <h3>{caption}</h3>
-        <h4>{value} items</h4>
+    <div style={{
+        backgroundImage: `url('/images/${img}')`,
+        backgroundSize: '100%',
+        boxShadow: '4px 2px rgba(0,0,0,0.2)',
+        color: color
+    }}>
+        <div className={"w3-container w3-padding-16 w3-box-shadow"}>        
+            <i className={"fa fa-"+icon+" w3-xxxlarge"}></i>
+            <h3>{caption}</h3>
+            <h4>{value} items</h4>
+        </div>
     </div>
+    
 

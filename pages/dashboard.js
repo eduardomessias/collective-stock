@@ -24,7 +24,7 @@ export default function Dashboard () {
 
             {/* <!-- Top container --> */}
             <TopContainer>
-                <button className="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onClick={toggleSidebar}><i class="fa fa-bars"></i>  Menu</button>
+                <button className="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onClick={toggleSidebar}><i className="fa fa-bars"></i>  Menu</button>
                 <span className="w3-bar-item w3-right">Collective-Stock</span>
             </TopContainer>
 
@@ -72,10 +72,10 @@ export default function Dashboard () {
 
                 <div className="w3-row-padding w3-margin-bottom">
                     <div className="w3-quarter">
-                        <InfoCard caption="Commics" value="52" color="red" icon="comment" img="comics.jpeg" />
+                        <InfoCard caption="Commics" value="52" color="white" icon="comment" img="comics.jpeg" />
                     </div>
                     <div className="w3-quarter">
-                        {/* <InfoCard caption="Views" value="99" color="blue" icon="eye" image="" /> */}
+                        <InfoCard caption="Watches" value="99" color="white" icon="clock-o" img="watches.jpg" />
                     </div>
                     <div className="w3-quarter">
                         {/* <InfoCard caption="Shares" value="23" color="teal" icon="share-alt" image="" /> */}
