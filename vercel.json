@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "api/ebay/comics.py": {
-            "includeFiles": "_files/**"
-        }
-    }
-}

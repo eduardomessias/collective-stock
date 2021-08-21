@@ -3,13 +3,13 @@ from http.server import BaseHTTPRequestHandler
 
 class handler(BaseHTTPRequestHandler):
     def get_results(self,payload):
-        import os
+        from os import environ
         from dotenv import load_dotenv
         from ebaysdk.exception import ConnectionError
         from ebaysdk.finding import Connection as Finding
         try:
             load_dotenv()
-            APP_ID = os.environ.get("EBAY_APPID")
+            APP_ID = environ.get("EBAY_APPID")
             api = Finding(siteid='EBAY-GB',appid=APP_ID,config_file=None)
             response = api.execute('findItemsAdvanced', payload)
             return response.dict()
