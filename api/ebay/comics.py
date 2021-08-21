@@ -43,11 +43,10 @@ class handler(BaseHTTPRequestHandler):
             ],
             'entriesPerPage':100,
             'pageNumber':page_number
-        }
-        # from os.path import join
-        # with open(join('data','payload.txt'),'r') as payload:            
+        }          
+        import json
         json_items = self.search_ebay(payload)
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
-        self.wfile.write(json_items)
+        self.wfile.write(json.dumps(json_items))
