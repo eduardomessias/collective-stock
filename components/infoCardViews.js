@@ -1,4 +1,4 @@
-import InfoCard from './layout'
+import {InfoCard} from './layout'
 
 const InfoCardViews = () =>
     <InfoCard caption="Views" value="99" color="blue" icon="eye" />
