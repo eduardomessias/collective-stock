@@ -4,6 +4,6 @@
     "itemFilter": [{
         "name": "StartTimeNewest"
     }],
-    "entriesPerPage": 100,
+    "entriesPerPage": 50,
     "pageNumber":1
 }
