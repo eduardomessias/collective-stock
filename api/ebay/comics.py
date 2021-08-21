@@ -35,19 +35,19 @@ class handler(BaseHTTPRequestHandler):
 
 
     def do_GET(self,page_number=1):
-        # payload = {
-        #     'keywords': 'CGC',
-        #     'categoryId': ['259104'],
-        #     'itemFilter': [
-        #         {'name': 'StartTimeNewest'}
-        #     ],
-        #     'entriesPerPage':100,
-        #     'pageNumber':page_number
-        # }
-        from os.path import join
-        with open(join('data','payload.txt'),'r') as payload:            
-            json_items = self.search_ebay(payload)
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            self.wfile.write(json_items)
+        payload = {
+            'keywords': 'CGC',
+            'categoryId': ['259104'],
+            'itemFilter': [
+                {'name': 'StartTimeNewest'}
+            ],
+            'entriesPerPage':100,
+            'pageNumber':page_number
+        }
+        # from os.path import join
+        # with open(join('data','payload.txt'),'r') as payload:            
+        json_items = self.search_ebay(payload)
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json_items)
