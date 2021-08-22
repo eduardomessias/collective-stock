@@ -34,7 +34,7 @@ class handler(BaseHTTPRequestHandler):
         return json.dumps(item_list)
 
 
-    def do_GET(self,page_number=1):
+    def do_GET(self,page_number=2):
         payload = {
             'keywords': 'CGC',
             'categoryId': ['259104'],
