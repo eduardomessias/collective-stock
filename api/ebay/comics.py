@@ -34,7 +34,15 @@ class handler(BaseHTTPRequestHandler):
         return json.dumps(item_list)
 
 
-    def do_GET(self,page_number=2):
+    def page_number(self):
+        from urllib.parse import urlparse, parse_qsl
+        query_string = dict(parse_qsl(urlparse(self.path).query))
+        page_number = query_string['page_number']
+        page_number
+
+
+    def do_GET(self):
+        page_number = self.page_number()
         payload = {
             'keywords': 'CGC',
             'categoryId': ['259104'],
@@ -42,7 +50,7 @@ class handler(BaseHTTPRequestHandler):
                 {'name': 'StartTimeNewest'}
             ],
             'entriesPerPage':100,
-            'pageNumber':page_number
+            'pageNumber': page_number
         }          
         json_items = self.search_ebay(payload)
         self.send_response(200)
