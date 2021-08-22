@@ -53,7 +53,7 @@ class handler(BaseHTTPRequestHandler):
             'itemFilter': [
                 {'name': 'StartTimeNewest'}
             ],
-            'entriesPerPage':100,
+            'entriesPerPage':10,
             'pageNumber': page_number
         }          
         json_items = self.search_ebay(payload)
