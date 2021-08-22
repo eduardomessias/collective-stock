@@ -35,10 +35,14 @@ class handler(BaseHTTPRequestHandler):
 
 
     def page_number(self):
-        from urllib.parse import urlparse, parse_qsl
-        query_string = dict(parse_qsl(urlparse(self.path).query))
-        page_number = query_string['page_number']
-        page_number
+        try:
+            from urllib.parse import urlparse, parse_qsl
+            query_string = dict(parse_qsl(urlparse(self.path).query))
+            page_number = int(query_string['page_number'])
+            return page_number
+        except KeyError as e:
+            page_number = 1
+            return page_number
 
 
     def do_GET(self):
