@@ -11,7 +11,7 @@ export async function getStaticProps() {
 }
 
 export default function Comics ({data}) {
-    const comicsList = data.map((comics) => <p>{comics.title}</p>)
+    const comicsList = data.map((comics) => <p key={comics.itemId}>{comics.title}</p>)
     return (
         <>
         <h1>Hello, comics collection!</h1>
