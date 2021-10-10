@@ -25,7 +25,7 @@ export default function Dashboard () {
             {/* <!-- Top container --> */}
             <TopContainer>
                 <button className="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onClick={toggleSidebar}><i className="fa fa-bars"></i>  Menu</button>
-                <span className="w3-bar-item w3-right">Collective-Stock</span>
+                <span className="w3-bar-item w3-right">Collective-Stock (alpha)</span>
             </TopContainer>
 
             {/* <!-- Sidebar/menu --> */}
